@@ -1568,11 +1568,11 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
 
     	//For GreenCoin, first output must go to GreencoinFoundation address
     	if (vtx[0].vout[1].scriptPubKey != GetFoundationScript())
-            return DoS(100, error("ConnectBlock() : coinstake does not pay to the charity in the first output"));
+            return DoS(100, error("ConnectBlock() : coinstake does not pay to the charity address in the first output"));
 
         int64_t greencoinAmount = GetPOSReward(pindexBest->nHeight, nFees) / 2;
         if (vtx[0].vout[1].nValue < greencoinAmount)
-            return DoS(100, error("ConnectBlock() : coinbase does not pay enough to the charity (actual=%d vs required=%d)", vtx[0].vout[1].nValue, greencoinAmount));
+            return DoS(100, error("ConnectBlock() : coinstake does not pay enough to the charity (actual=%d vs required=%d)", vtx[0].vout[1].nValue, greencoinAmount));
 
     }
     // ppcoin: track money supply and mint amount info
