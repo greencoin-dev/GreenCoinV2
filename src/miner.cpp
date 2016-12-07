@@ -124,10 +124,8 @@ CBlock* CreateNewBlock(CReserveKey& reservekey, bool fProofOfStake, int64_t* pFe
       assert(txNew.vin[0].scriptSig.size() <= 100);
       txNew.vout.resize(2);
 
-      int64_t foundationAmt = 2000 * COIN;
       txNew.vout[0].SetEmpty();
       txNew.vout[1].scriptPubKey = GetFoundationScript();
-      txNew.vout[1].nValue = foundationAmt;
     }
 
     // Add our coinbase tx as first transaction
@@ -355,6 +353,11 @@ CBlock* CreateNewBlock(CReserveKey& reservekey, bool fProofOfStake, int64_t* pFe
 
         if (!fProofOfStake)
             pblock->vtx[0].vout[0].nValue = GetPOWReward(pindexPrev->nHeight +1, nFees);
+        else
+        {
+            //assign the foundation subsidy here instead of downstream
+            pblock->vtx[0].vout[1].nValue = GetPOSReward(pindexPrev->nHeight +1, nFees) / 2;
+        }
 
 
         if (pFees)
