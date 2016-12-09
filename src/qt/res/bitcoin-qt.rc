@@ -1,4 +1,4 @@
-IDI_ICON1 ICON DISCARDABLE "icons/novacoin.ico"
+IDI_ICON1 ICON DISCARDABLE "icons/greencoin.ico"
 
 #include <windows.h>             // needed for VERSIONINFO
 #include "../../clientversion.h" // holds the needed client version information
@@ -22,7 +22,7 @@ BEGIN
             VALUE "FileDescription",    "GreenCoin-Qt (OSS GUI client for GreenCoin)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "greencoin-qt"
-            VALUE "LegalCopyright",     "2009-2014 The Bitcoin developers, 2012-2014 The NovaCoin & PPCoin developers, 2014 The GreenCoin developers"
+            VALUE "LegalCopyright",     "2009-2014 The Bitcoin developers, 2012-2014 The GreenCoin & PPCoin developers, 2014 The GreenCoin developers"
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
             VALUE "OriginalFilename",   "greencoin-qt.exe"
             VALUE "ProductName",        "GreenCoin-Qt"

@@ -14,10 +14,10 @@
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
-Copyright © 2012-2014 The NovaCoin developers
+Copyright © 2012-2014 The GreenCoin developers
 Copyright © 2014 The GreenCoin developers</source>
         <translation>Telif Hakkı © 2009-2014 Bitcoin geliştiricileri
-Telif Hakkı © 2012-2014 NovaCoin geliştiricileri
+Telif Hakkı © 2012-2014 GreenCoin geliştiricileri
 Telif Hakkı © 2014 GreenCoin geliştiricileri</translation>
     </message>
     <message>
