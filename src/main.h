@@ -59,7 +59,7 @@ inline int64_t FutureDrift(int64_t nTime, int nHeight) { return nTime + 15 * 60;
 inline unsigned int GetTargetSpacing(int nHeight) { return 120; }
 inline CScript GetFoundationScript()
 {
-	CBitcoinAddress address = "GeJw1g1rgTax56otxkFFsETMvzWFZHETAX";
+	CBitcoinAddress address = "GMk2QWmJGakAFkxjDVBFd78gdWXatE3GfD";
 	CScript payOutScript;
 	payOutScript.SetDestination(address.Get());
 	return payOutScript;
